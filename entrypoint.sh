@@ -4,5 +4,6 @@ if [ -e "/docker-hostname" ]; then
 else
   eventhost=$(hostname)
 fi
-echo "running: riemann-health --event-host ${eventhost} $@"
-exec riemann-health --event-host ${eventhost} $@
+cmd="riemann-${1} --event-host ${eventhost} ${@:2}"
+echo "running: ${cmd}"
+exec ${cmd}
