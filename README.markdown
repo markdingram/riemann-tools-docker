@@ -29,7 +29,7 @@ Here, we're running in docker-compose and, as an example, setting the `--event-h
 ```yaml
 riemann-tools-proc:
   image: 'creators/riemann-tools:latest'
-  command: 'health  --cpu-warning 0.8'
+  command: 'health --cpu-warning 0.8'
   links:
     - 'riemann-riemann:riemann'
   pid: host
@@ -46,7 +46,7 @@ In docker cloud, you probably want to run `riemann-health` on all your nodes:
 ```yaml
 riemann-tools-proc:
   image: 'creators/riemann-tools:latest'
-  command: 'health  --cpu-warning 0.8'
+  command: 'health --cpu-warning 0.8'
   deployment_strategy: every_node
   links:
     - 'riemann-riemann:riemann'
