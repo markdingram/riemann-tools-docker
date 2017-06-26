@@ -6,7 +6,7 @@ Run any of the [riemann-tools](https://github.com/riemann/riemann-tools) as a do
 
 This docker image will try the following sources to use as the `--event-host` option (in this order):
 
-1. Content of the file /docker-hostname
+1. Content of the file `/docker-hostname`
 2. Environment variable `EVENT_HOST`
 3. Output of running ``hostname`` in the container
 
